@@ -8,7 +8,7 @@ const app = express();
 app.use(cors())
 app.use(express.json())
 
-const port = 5000;
+const port = process.env.PORT | 5000;
 
 const uri = "mongodb+srv://nbnext50:Nextb_0987@cluster0.g9qbt.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 const client = new MongoClient(uri);
